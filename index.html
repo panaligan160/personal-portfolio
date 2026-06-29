@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        .about-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.profile{
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+}
+@media (max-width: 768px){
+
+    .about-container{
+        flex-direction: column;
+    }
+
+    .project-card{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero h1{
+        font-size: 36px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+
+}
+.contact-card p{
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        header {
+            background: #020617;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            color: #38bdf8;
+        }
+        section h2{
+                margin: 10px 0 5px;
+            color: #38bdf8;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #38bdf8;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #e2e8f0;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: #020617;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            font-size: 14px;
+        }
+
+        button {
+            background: #38bdf8;
+            border: none;
+            padding: 10px 15px;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+        }
+        section div.card h3{
+          color: #38bdf8;
+        }
+        .card a{
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.card a i{
+    color: #38bdf8;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.card a:hover{
+    color: #38bdf8;
+}
+
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-left,
+.about-right{
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-right h3{
+    color: #38bdf8;
+}
+header{
+    background: #020617;
+    padding: 20px 50px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-info h1{
+    margin: 0;
+    color: #38bdf8;
+}
+
+.profile-info p{
+    margin-top: 5px;
+    color: #e2e8f0;
+}
+
+.profile-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+}
+nav{
+    display: flex;
+    gap: 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    background: #1e293b;
+    padding: 10px 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover{
+    background: #38bdf8;
+    color: black;
+    transform: translateY(-2px);
+}
+.hero{
+    position: relative;
+}
+
+/* Cover Photo */
+.cover-photo{
+    background-image: url("cover.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+}
+
+/* Container */
+.header-container{
+    position: absolute;
+    bottom: -45px;
+    left: 50px;
+    right: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Profile */
+.profile-section{
+    display: flex;
+    align-items: flex-end;
+    gap:20px;
+}
+
+/* Profile Picture */
+.profile-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:6px solid white;
+    object-fit:cover;
+}
+
+/* Name */
+.profile-info{
+    margin-bottom:20px;
+}
+
+.profile-info h1{
+    color:white;
+    margin:0;
+    font-size:35px;
+}
+
+.profile-info p{
+    color:white;
+}
+
+section{
+    padding:40px;
+    margin-top:90px;
+}
+.cover-photo{
+    background-image: url("image 4.png");
+}
+.header-container{
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.profile-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-info{
+    text-align: center;
+}
+
+.profile-info h1{
+    margin: 10px 0 5px;
+    color: white;
+}
+
+.profile-info p{
+    margin-bottom: 20px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+nav a{
+    padding:10px 20px;
+    background:#1e293b;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#38bdf8;
+    color:black;
+    transform:translateY(-3px);
+}
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+}
+
+.view-gallery{
+    margin-top:20px;
+    text-align:center;
+}
+
+.view-gallery a{
+    text-decoration:none;
+    color:#38bdf8;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.view-gallery a:hover{
+    color:white;
+}
+
+#skills{
+    padding:70px 10%;
+    background:#111827;
+}
+
+.section-title{
+    color:#38bdf8;
+    font-size:40px;
+    margin-bottom:40px;
+    font-weight:bold;
+}
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.skill-card{
+    background:#0b1120;
+    border:1px solid rgba(56,189,248,.15);
+    border-radius:18px;
+    padding:30px 25px;
+    transition:.4s;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+    box-shadow:0 15px 35px rgba(56,189,248,.25);
+}
+
+.skill-card i{
+    font-size:45px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.skill-card h3{
+    color:white;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.skill-card p{
+    color:#b8c1d1;
+    line-height:1.6;
+}
+
+#contact{
+    padding:80px 10%;
+    background:#111827;
+    text-align:center;
+}
+
+.contact-title{
+    font-size:40px;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.contact-subtitle{
+    color:#b8c1d1;
+    margin-bottom:50px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.contact-card{
+    background:#0b1120;
+    padding:30px;
+    border-radius:18px;
+    transition:.4s;
+    border:1px solid rgba(56,189,248,.2);
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+.contact-card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+    box-shadow:0 15px 35px rgba(56,189,248,.3);
+}
+
+.contact-card i{
+    font-size:45px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.contact-card h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.contact-card p{
+    color:#cbd5e1;
+}
+
+.contact-card a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact-card a:hover{
+    text-decoration:underline;
+}
+
+.about-container{
+    display:flex;
+    justify-content:space-between;
+    gap:60px;
+    background:#05091d;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.about-left,
+.about-right{
+    width:48%;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.info-item:last-child{
+    border-bottom:none;
+}
+
+.info-item span{
+    font-size:22px;
+}
+
+.info-item p{
+    color:white;
+    font-size:22px;
+}
+
+.about-right h3{
+    color:#38bdf8;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+.education-card{
+    background:#0b1120;
+    border-left:4px solid #38bdf8;
+    padding:18px 20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.education-card:hover{
+    transform:translateX(8px);
+}
+
+.education-card h4{
+    color:white;
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.education-card p{
+    color:#d1d5db;
+    line-height:1.6;
+}
+
+#projects{
+    padding:60px 10%;
+}
+
+.section-title{
+    color:#38bdf8;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.project-card{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    background:#05091d;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.project-img{
+    width:350px;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    border:2px solid #38bdf8;
+}
+
+.project-content{
+    flex:1;
+}
+
+.project-content h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.project-content p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.view-btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#38bdf8;
+    color:#111827;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.view-btn:hover{
+    background:#ffffff;
+}
+
+.hero{
+    background: linear-gradient(rgba(8,15,40,.7), rgba(8,15,40,.7)),
+                url("image 4.png") center/cover no-repeat;
+    height:500px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.profile{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:6px solid white;
+    object-fit:cover;
+    margin-bottom:20px;
+
+    transition:.3s;
+}
+
+.profile:hover{
+    transform:scale(1.05);
+}
+
+.hero h1{
+    font-size:60px;
+    color:white;
+    margin-bottom:10px;
+}
+
+.course{
+    color:white;
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    background:#38bdf8;
+    color:#111827;
+    text-decoration:none;
+    padding:14px 35px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+.btn-outline{
+    background:transparent;
+    color:white;
+    border:2px solid #38bdf8;
+}
+
+.btn-outline:hover{
+    background:#38bdf8;
+    color:#111827;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+  <header class="hero">
+
+    <img src="image 1.png" alt="Profile" class="profile">
+
+    <h1>Marjohn Paul M. Panaligan</h1>
+
+    <p class="course">
+        Bachelor of Science in Information Technology Graduate
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+
+</header>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+
+    </div>
+
+</header>
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-container">
+
+        <div class="about-left">
+
+            <div class="info-item">
+              
+                <p><strong>Age:</strong> 22</p>
+            </div>
+
+            <div class="info-item">
+                
+                <p><strong>Birthday:</strong> August 15, 2003</p>
+            </div>
+
+            <div class="info-item">
+              
+                <p><strong>Gender:</strong> Male</p>
+            </div>
+
+            <div class="info-item">
+               
+                <p><strong>Civil Status:</strong> Single</p>
+            </div>
+
+            <div class="info-item">
+                
+                <p><strong>Citizenship:</strong> Filipino</p>
+            </div>
+
+            <div class="info-item">
+                
+                <p><strong>Religion:</strong> Catholic</p>
+            </div>
+
+        </div>
+
+        <div class="about-right">
+
+            <h3>Educational Background</h3>
+
+            <div class="education-card">
+                <h4>Tertiary</h4>
+                <p>CSTC - College of Sciences, Technology and Communication Inc.</p>
+            </div>
+
+            <div class="education-card">
+                <h4>Secondary</h4>
+                <p>Dr. Panfilo Castro National High School</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="card">
+        <h3>OJT / Internship Completed</h3>
+<p>
+Completed my On-the-Job Training (OJT) at Ace Medical Center Sariaya,
+where I gained hands-on experience in IT support, documentation,
+computer troubleshooting, and office operations.
+</p>
+
+<div class="gallery">
+
+    <a href="ojt-gallery.html">
+        <img src="ojt1.png" alt="">
+    </a>
+
+    <a href="ojt-gallery.html">
+        <img src="ojt2.png" alt="">
+    </a>
+
+    <a href="ojt-gallery.html">
+        <img src="ojt3.png" alt="">
+    </a>
+
+    <a href="ojt-gallery.html">
+        <img src="ojt4.png" alt="">
+    </a>
+
+    <a href="ojt-gallery.html">
+        <img src="ojt5.png" alt="">
+    </a>
+
+    <a href="ojt-gallery.html">
+        <img src="ojt6.png" alt="">
+    </a>
+
+    <a href="ojt-gallery.html">
+        <img src="ojt7.png" alt="">
+    </a>
+
+       <a href="ojt-gallery.html">
+        <img src="ojt8.png" alt="">
+    </a>
+
+</div>
+
+<div class="view-gallery">
+    <a href="ojt-gallery.html">
+        View Complete OJT Gallery →
+    </a>
+</div>
+ <h3>Seminars and Training Attended</h3>
+        <p>ITSC 2024 TRAVERSE - Navigating the Cloud : Revolutionizing the IT Landscape - A Seminar on Cloud Computing and Career Strategies in the Industry SYNTAX - CSTC Sariaya FEB 2025</p>
+        <p>ITSC 2025 ELEVATE - From Data to Decision: An intro to Data Analytica for Future Profestion SYNTAX - CSTC Sariaya FEB 2025</p> 
+        <p>ITSC IGNITE - Inspire Growth, Nurture Innovation, and Transform Excelience through the Power of Information Technology SYNTAX - CSTC Sariays NOV 2025</p> 
+        <p>ITSC 2024 TRAVERSE - Navigating the Cloud : Revolutionizing the IT Landscape - A Seminar on Cloud Computing and Career Strategies in the Industry SYNTAX - CSTC Sariaya Fetruary 2024 FEB 2023</p>
+
+    
+</section>
+
+<section id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <i class="fas fa-laptop-medical"></i>
+            <h3>Basic Computer Troubleshooting</h3>
+            
+        </div>
+
+        <div class="skill-card">
+            <i class="fas fa-print"></i>
+            <h3>Printer Setup &  Basic Repair</h3>
+          
+        </div>
+
+        <div class="skill-card">
+            <i class="fas fa-desktop"></i>
+            <h3>Pc Formatting and Maintenace</h3>
+           
+        </div>
+
+        <div class="skill-card">
+            <i class="fas fa-network-wired"></i>
+            <h3>Basic Internet/network Troubleshooting</h3>
+           
+        </div>
+
+        <div class="skill-card">
+            <i class="fas fa-headset"></i>
+            <h3>Basic Technical Support</h3>
+           
+        </div>
+
+        <div class="skill-card">
+            <i class="fas fa-video"></i>
+            <h3>Basic Knowledge of CCTV Installation and Maintenance</h3>
+         
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>Basic Front-End Development (HTML & CSS)</h3>
+           
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-card">
+
+        <img src="image 2.png" alt="DriverEase Project" class="project-img">
+
+        <div class="project-content">
+            <h3>DriverEase</h3>
+
+            <p>
+                <strong>DriverEase:</strong> A Web-Based Driving School Management
+                System with Appointment System, E-Learning, and 2D Practical Road
+                Traffic Game for Success Driving School in Gomez St., Lucena City,
+                Quezon.
+            </p>
+
+            <a href="https://driverease.online" target="_blank" class="view-btn">
+                View Project
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+
+    <h2 class="contact-title">Contact Me</h2>
+
+    <p class="contact-subtitle">
+        Feel free to contact me through the following platforms.
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <p>09472180456</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>marjohnpaulpanaligan15@gmail.com</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <p> Concecion Palasan,Sariaya, Quezon</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fab fa-facebook"></i>
+            <h3>Facebook</h3>
+            <a href="https://www.facebook.com/share/185LcTAyci/" target="_blank">
+                Visit Profile
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Marjohn Paul M. Panaligan</p>
+</footer>
+
+</body>
+</html>
